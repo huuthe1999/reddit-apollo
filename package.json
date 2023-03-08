@@ -1,25 +1,39 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.2",
-    "@chakra-ui/react": "^2.2.1",
-    "@chakra-ui/theme-tools": "^2.0.2",
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.9.0",
-    "framer-motion": "^6.3.0",
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "typescript": "^4.7.2"
-  }
+	"private": true,
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"compile": "graphql-codegen --require dotenv/config --config codegen.ts dotenv_config_path=./.env.development.local",
+		"watch": "graphql-codegen -w"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.7.10",
+		"@chakra-ui/icons": "^2.0.2",
+		"@chakra-ui/react": "^2.2.1",
+		"@chakra-ui/theme-tools": "^2.0.2",
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.9.0",
+		"dotenv": "^16.0.3",
+		"formik": "^2.2.9",
+		"framer-motion": "^6.3.0",
+		"global": "^4.4.0",
+		"graphql": "^16.6.0",
+		"next": "^13.2.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"yup": "^1.0.2"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^3.2.1",
+		"@graphql-codegen/client-preset": "^2.1.0",
+		"@graphql-codegen/typed-document-node": "^3.0.2",
+		"@graphql-codegen/typescript": "^3.0.2",
+		"@graphql-codegen/typescript-operations": "^3.0.2",
+		"@graphql-codegen/typescript-react-apollo": "^3.3.7",
+		"@types/node": "^18.0.0",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"typescript": "^4.9.5"
+	}
 }
